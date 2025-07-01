@@ -17,7 +17,7 @@ const LeadForm = () => {
     email: "",
     preferences: "",
     source: "Digitals",
-    sourcedetail: "Google Ad",
+    sourcedetail: "WebSite",
     remark: "Hello",
   });
   const [status, setStatus] = useState({ success: null, message: "" });

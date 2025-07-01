@@ -14,6 +14,7 @@ const submitLead = async (req, res) => {
   } = req.body;
 
   try {
+    console.log("Received lead data:", req.body);
     const newLead = new Lead({
       firstName,
       lastName,
@@ -24,7 +25,8 @@ const submitLead = async (req, res) => {
       preferences,
       remark,
     });
-    await newLead.save();
+    const savedLead = await newLead.save();
+    console.log("Lead saved in DB:", savedLead);
 
     const response = await axios.post(
       "https://nirman.maksoftbox.com/MDocBoxAPI/MdocAddEnquiryORTeleCalling",
@@ -39,15 +41,18 @@ const submitLead = async (req, res) => {
         MobileNo: mobileNo,
         Email: email,
         Preferences: preferences,
-        Source: source,
-        SourceDetail: sourceDetail,
+        Source: "Digitals",
+        SourceDetail: "WebSite",
         Remark: remark,
       }),
       { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
     );
 
     res.status(200).json({ success: true, mdocResponse: response.data });
+
+    // res.status(200).json({ success: true, message: "Saved to MongoDB only" });
   } catch (err) {
+    console.error("Error saving lead:", err);
     res.status(500).json({ success: false, error: err.message });
   }
 };
