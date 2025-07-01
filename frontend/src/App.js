@@ -8,6 +8,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Divider,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "slick-carousel/slick/slick.css";
@@ -17,6 +18,14 @@ import LeadForm from "./components/LeadForm";
 import "./App.css";
 
 const App = () => {
+  const headings = [
+    "CONNECTIVITY",
+    "LEISURE",
+    "SHOPPING / MALLS",
+    "EDUCATIONAL INSTITUTES",
+    "HEALTHCARE",
+  ];
+
   return (
     <Box>
       <Box
@@ -43,19 +52,24 @@ const App = () => {
             />
           </Box>
           <Box>
-            <Button variant="contained" sx={{ mr: 1 }}>
+            <Button variant="outlined" sx={{ mr: 1, color: "#a2a2a2" }}>
               Schedule Visit
             </Button>
-            <Button variant="outlined">☰</Button>
+            <Button sx={{ color: "#a2a2a2" }}>☰</Button>
           </Box>
         </Box>
       </Box>
       <Container sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
-          Why Choose Astoria Royals?
+        <Typography variant="h2" gutterBottom>
+          Where prestige takes residence
         </Typography>
         <Typography>
-          Perfect blend of comfort, location, and lifestyle.
+          Royal living is reimagined as Astoria Royals, a luxurious project of
+          spacious 4 & 3 BHK homes. Thoughtful layout and optimal use of space
+          are not the only defining attributes of this gem of a residence; it
+          also boasts a massive array of amenities. Tucked in a fast-developing
+          location and constructed with precision in mind to bring to you a
+          lifestyle that resonates with the name of the project itself.
         </Typography>
       </Container>
       <Container sx={{ py: 8 }}>
@@ -75,8 +89,8 @@ const App = () => {
         </Grid>
       </Container>
       <Container sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
-          Amenities & Lifestyle
+        <Typography variant="h3" color="secondary" gutterBottom>
+          Walkthrough
         </Typography>
         <img
           src="../assets/Desktop/banner-2.png"
@@ -85,43 +99,18 @@ const App = () => {
         />
       </Container>
       <Container sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
-          Why Choose Astoria Royals?
+        <Typography variant="h2" gutterBottom>
+          A stellar lineup of luxuries
         </Typography>
         <Typography>
-          Perfect blend of comfort, location, and lifestyle.
+          Luxury isn't a label at Astoria Royals, it is a full-blown experience.
+          From indulgent leisure spaces and wellness facilities to top-tier
+          entertainment, every amenity is designed to surpass expectations.
+          Whatever you desire, chances are, it’s already waiting for you.
         </Typography>
       </Container>
-      {/* <Container sx={{ py: 8 }}>
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" gutterBottom>
-              Crafted With Elegance
-            </Typography>
-            <Typography>Spacious interiors and stunning design.</Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <img src="/design.jpg" alt="Design" width="100%" />
-          </Grid>
-        </Grid>
-      </Container> */}
-      {/* <Container sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
-          Gallery
-        </Typography>
-        <Grid container spacing={2} justifyContent="center">
-          {[1, 2, 3].map((i) => (
-            <Grid item xs={12} md={4} key={i}>
-              <img src={`../assets/Desktop/${i}.jpg`} alt={`Gallery ${i}`} width="100%" />
-            </Grid>
-          ))}
-        </Grid>
-      </Container> */}
 
       <Container sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
-          Gallery
-        </Typography>
         <Slider
           dots={true}
           infinite={true}
@@ -144,37 +133,42 @@ const App = () => {
       </Container>
 
       <Container sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
-          Location Advantage
+        <Typography variant="h3" color="secondary" gutterBottom>
+          Sample Flat
         </Typography>
         <img src="../assets/Desktop/banner-3.png" alt="Location" width="100%" />
       </Container>
       <Container sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
-          Why Choose Astoria Royals?
+        <Typography variant="h2" gutterBottom>
+          A landmark destination for elevated living
         </Typography>
         <Typography>
-          Perfect blend of comfort, location, and lifestyle.
+          Ravet is where Pune's future is unfolding. Tucked between the
+          Pune-Mumbai Expressway and the Katraj-Dehu Bypass, this rapidly
+          developing suburban neighbourhood connects you to wherever you want to
+          be without the usual hassle. It owes its incredible connectivity to
+          the old and new Mumbai highways, the Aundh-Ravet BRTS road, and Akurdi
+          Railway Station. Top schools, business hubs, entertainment enclaves,
+          healthcare facilities and other essentials are all within close
+          proximity. This isn't just a convenient location, but a smart one.
         </Typography>
       </Container>
-      <Box sx={{ position: "relative", py: 8 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <img src="../assets/Desktop/baneer-5.png" alt="Map" width="100%" />
-        <Button
-          variant="contained"
-          color="primary"
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-          }}
-        >
-          Locate Us
+        <Button variant="outlined" color="secondary">
+          CLICK HERE TO GET DIRECTIONS
         </Button>
       </Box>
       <Container sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
-          Why Choose Astoria Royals?
+        <Typography variant="h2" gutterBottom>
+          From the trusted
         </Typography>
         <Typography>
           <img
@@ -182,19 +176,44 @@ const App = () => {
             alt="Map"
             width="100%"
           />
-          Perfect blend of comfort, location, and lifestyle.
+          Nirman Greens is a dynamic force in Pune's real estate sector with 30+
+          years of expertise. With 15 million square feet delivered and even
+          more in the pipeline, every project they undertake is a testament to
+          masterful craftsmanship and a relentless pursuit for excellence.
+          Driven by innovation and an eye for detail, they remain steadfast in
+          their commitment to conceiving spaces that adapt to nature and evolve
+          with time.
         </Typography>
       </Container>
       <Container sx={{ py: 8 }}>
-        {[1, 2, 3, 4, 5].map((i) => (
-          <Accordion key={i}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              Accordion {i}
+        <Typography
+          variant="h3"
+          color="secondary"
+          textAlign="center"
+          gutterBottom
+        >
+          Key Distances
+        </Typography>
+        {headings.map((title, index) => (
+          <Accordion
+            key={index}
+            sx={{
+              bgcolor: "black",
+              color: "white",
+              border: "1px solid #b98a2d",
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+            >
+              <Typography >{title}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mumbai-Pune Expressway, Hinjawadi connectivity, Balewadi High
+                Street
               </Typography>
+              <Typography>05 Mins, 20 Mins, 30 Mins,</Typography>
             </AccordionDetails>
           </Accordion>
         ))}
@@ -213,44 +232,72 @@ const App = () => {
                 style={{ marginRight: 16 }}
               />
             </Grid>
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{ backgroundColor: "grey.500" }}
+            />
             <Grid item xs={12} sm={3}>
-              <Typography>Contact</Typography>
+              <Typography>SITE ADDRESS</Typography>
+              <Typography>
+                {" "}
+                Astoria Royals, Aundh-Ravet BRTS Road, Ravet, Pimpri-Chinchwad,
+                SITE ADDRESS Maharashtra - 412101
+              </Typography>
+              <Typography>CORPORATE OFFICE</Typography>
+              <Typography>
+                Amar Business Zone, B Wing, Office No. 902 S. No. 87/1A & 87
+                (Part), CORPORATE OFFICE Baner, Pune - 411045
+              </Typography>
             </Grid>
-            <Grid item xs={12} sm={3}>
-              <Typography>Legal</Typography>
-            </Grid>
-            <Grid item xs={12} sm={3}>
-              <Typography>Follow Us</Typography>
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{ backgroundColor: "grey.500" }}
+            />
+            <Grid
+              item
+              xs={12}
+              sm={3}
+              direction="col"
+              sx={{
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Typography>00000 00000</Typography>
               <img
                 src="../assets/logo and rera/rera.png"
                 alt="Logo 1"
-                height={60}
+                height={45}
                 style={{ marginRight: 16 }}
               />
-              <img
-                src="../assets/icons/1.png"
-                alt="Logo 1"
-                height={60}
-                style={{ marginRight: 16 }}
-              />
-              <img
-                src="../assets/icons/2.png"
-                alt="Logo 1"
-                height={60}
-                style={{ marginRight: 16 }}
-              />
-              <img
-                src="../assets/icons/3.png"
-                alt="Logo 1"
-                height={60}
-                style={{ marginRight: 16 }}
-              />
-              <img
-                src="../assets/icons/4.png"
-                alt="Logo 1"
-                height={60}
-                style={{ marginRight: 16 }}
-              />
+              <Grid item xs={12} sm={3}>
+                <img
+                  src="../assets/icons/1.png"
+                  alt="Logo 1"
+                  height={15}
+                  style={{ marginRight: 6 }}
+                />
+                <img
+                  src="../assets/icons/2.png"
+                  alt="Logo 2"
+                  height={15}
+                  style={{ marginRight: 6 }}
+                />
+                <img
+                  src="../assets/icons/3.png"
+                  alt="Logo 3"
+                  height={15}
+                  style={{ marginRight: 6 }}
+                />
+                <img
+                  src="../assets/icons/4.png"
+                  alt="Logo 4"
+                  height={15}
+                  style={{ marginRight: 6 }}
+                />
+              </Grid>
             </Grid>
           </Grid>
         </Container>

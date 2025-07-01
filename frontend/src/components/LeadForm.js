@@ -50,15 +50,15 @@ const LeadForm = () => {
         mt: 5,
         p: 4,
         boxShadow: 3,
-        bgcolor: "white",
-        borderRadius: 2,
+        bgcolor: "black",
+        border: "1px solid #b98a2d",
         display: "flex",
         flexDirection: "column",
         gap: 2,
       }}
     >
-      <Typography variant="h5" fontWeight="bold">
-        Enquire Now
+      <Typography variant="h5" color="secondary" textAlign="center" fontWeight="bold">
+        THE SUITE LIFE UPGRADE YOU'VE BEEN WAITING FOR IS HERE
       </Typography>
       <TextField
         name="firstName"
@@ -113,6 +113,10 @@ const LeadForm = () => {
       <Button type="submit" variant="contained" color="primary">
         Submit
       </Button>
+      <Typography sx={{textAlign: "center", fontSize: "10px"}}>
+        *T&C Apply *Your privacy is very important to us; we will never share
+        your information.
+      </Typography>
 
       {status.message && (
         <Alert severity={status.success ? "success" : "error"}>
